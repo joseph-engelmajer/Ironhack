@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>About</title>
+  <meta name="description" content="About me">
+</head>
+
+<body>
+  <h1>My First Sinatra App! </h1>
+
+  <p> "My name is JoJo. I realize there's more to
+	life than being really, really ridiculously
+	good looking, but I was born this way. It's 
+	not my fault."
+	</p>
+
+	<% if Date.today.tuesday? %>
+	<p> JJ Styles is <strong>NOT</strong> a fan of Tuesdays like today.
+	</p>
+	<p>
+		Izzy Ironside  was born on <%= Date.today %>
+	</p>
+	<% end %>
+</body>
+</html>

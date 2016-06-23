@@ -42,4 +42,13 @@ RSpec.describe Task do
 			expect(my_list.tasks.length).to eq(3)
 		end
 	end
+	describe "#delete_task" do 
+		it "deletes a task based on the unique ID provided" do 
+			my_list.add_task(task)
+			my_list.add_task(task)
+			my_list.add_task(task)
+			my_list.delete_task(2)
+			expect(my_list.tasks.length).to eq(2)
+		end
+	end
 end
