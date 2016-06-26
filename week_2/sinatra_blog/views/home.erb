@@ -1,0 +1,15 @@
+<h1> My Blog! Welcome!!! </h1>
+
+<ul>
+<% @my_blog.each_with_index do |post, index| %>
+  <a href="/details/<%= index%>">
+<li>
+  <%= post.title %>
+</li>
+  </a>
+<% end %>
+<a href = "/new_post">
+Create New Post
+</a>
+</ul>
+
