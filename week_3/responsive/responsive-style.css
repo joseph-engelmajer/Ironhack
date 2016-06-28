@@ -1,0 +1,21 @@
+.header-image{
+    background-image: url("idiot.gif");
+    background-repeat:no-repeat;
+    height: 250px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .header-image {
+        background-image: url("https://media.giphy.com/media/3oEjHEZ9PVj0L2u5xu/giphy.gif");
+        height: 700px;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .header-image {
+        background-image: url("https://media.giphy.com/media/l41YfoGhpUZgItdMk/giphy.gif");
+        height: 1000px;
+    }
+}

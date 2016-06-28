@@ -1,0 +1,86 @@
+body {
+	background-image: url("https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg")
+}
+
+a {
+	color:rgba(0,0,0,.5);
+}
+
+a.hover {
+	color:rgba(0,0,0,1);
+}
+
+.col-sm-3 {
+	padding-top: 10px;
+}
+
+#logo {
+	margin-top: 10px;
+	text-align: center;
+	opacity:0.5;
+}
+
+#signup {
+	background-color: #00E86A;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:white;
+	border:0px;
+	padding-top: 10px;
+}
+
+#login {
+	background-color: #498FFF;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:white;
+	padding-top: 10px;
+}
+
+#leftnav{
+	text-align: left;
+}
+
+#rightnav {
+	text-align: right;
+}
+
+#smallbtn {
+	background-color: transparent;
+	border:0px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:white;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+
+#smallbtn:hover{
+	background-color: rgba(255,255,255,.5);
+}
+
+#sidemenu {
+	background-color: rgb(200,200,200);
+	height:1200px;
+}
+
+#rightnav2 {
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+
+#promo {
+	text-align: center;
+	background-color: #FFE8A8;
+	margin-top: 10px;
+
+}
+#topnav{
+	background-color: transparent;
+	border:0px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:white;
+}
+
+#topnav:hover{
+	background-color: rgba(255,255,255,.5);
+}
