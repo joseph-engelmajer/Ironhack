@@ -1,3 +1,6 @@
+require("../app.js")
+
+
 class PitFight{
 	constructor(viking1, viking2){
 		this.viking1 = viking1
@@ -16,6 +19,15 @@ class PitFight{
 			if (this.viking1.health < 20 || this.viking2.health < 20) {
 				i = 10		
 			}
+
+			if (i=10 && this.viking1.health > this.viking2.health) {
+				console.log(this.viking1.name + " is the winner!")
+			} else if (i=10 && this.viking2.health > this.viking1.health) {
+				console.log(this.viking2.name + " is the winner!")
+			}
+
 		}	
 	}	
 }
+
+module.exports = PitFight 

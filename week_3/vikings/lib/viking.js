@@ -1,3 +1,5 @@
+"use strict";
+
 class Viking {
 	constructor (name, warcry, health, strength){
 		this.name = name
@@ -11,4 +13,6 @@ class Viking {
 	}
 
 }
+
+module.exports = Viking 
 
