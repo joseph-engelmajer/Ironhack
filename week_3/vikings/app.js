@@ -14,6 +14,6 @@ var Jumbo = new Viking('Jumbo', 'WWAAAAAHHHHRRRR', 100, 65)
 
 var vikingArray= [Ragnar,Chandler,Ross,Nizar,Josh,Christie,Caro,Rachel,Andres,Jumbo]
 
-new PitFight(Ragnar, Nizar) 
-
-module.exports = vikingArray 
+fight1 = new PitFight(Ragnar, Nizar)
+fight1.attack()
+fight1.fightRounds()
