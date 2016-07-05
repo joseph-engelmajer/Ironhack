@@ -1,0 +1,11 @@
+<h1> Submit Your Text for Fancification! </h1>
+
+<form action="/asciis" method="post">
+  <div>
+    <label for="ascii_text_conversion">Text</label>
+    <textarea name="ascii_text[user_text]" id="ascii_text_conversion_user_text"></textarea>
+  </div>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+  <button type="submit">Submit text</button>
+</form>
