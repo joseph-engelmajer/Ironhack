@@ -16,3 +16,15 @@ proj7 = Project.create(name: "ironhack", description: "code camp")
 proj8 = Project.create(name: "copperhack", description: "reddish code camp")
 proj9 = Project.create(name: "platinum hack", description: "fancy code camp")
 proj10 = Project.create(name: "plastic hack", description: "bootlegged code camp")
+
+#====================================================================================================
+#====================================================================================================
+#====================================================================================================
+
+TimeEntry.create(project_id: proj1.id, hours: 2, minutes: 30, comments: "hello", date: Time.now)
+TimeEntry.create(project_id: proj1.id, hours: 1, minutes: 0, comments: "heyy", date: Time.now)
+TimeEntry.create(project_id: proj1.id, hours: 4, minutes: 45, comments: "yooo", date: Time.now)
+TimeEntry.create(project_id: proj2.id, hours: 0, minutes: 40, comments: "yoyo", date: Time.now)
+TimeEntry.create(project_id: proj3.id, hours: 3, minutes: 30, comments: "oh no", date: Time.now)
+TimeEntry.create(project_id: proj2.id, hours: 1, minutes: 15, comments: "wow!", date: Time.now)
+TimeEntry.create(project_id: proj4.id, hours: 6, minutes: 20, comments: "hey there", date: Time.now)
