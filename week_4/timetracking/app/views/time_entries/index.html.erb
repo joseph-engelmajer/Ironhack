@@ -8,6 +8,9 @@
 	
 		<a href='/projects/<%= @my_project.id %>/time_entries/<%= entry.id %>/edit'>
 		Edit
+		</a>
+		<a href='<%= project_time_entry_path(@my_project, entry) %>', data-confirm="are you sure?", data-method="delete">
+		Delete
 		</a>	
 	</li>
 	<% end %>
