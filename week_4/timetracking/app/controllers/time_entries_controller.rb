@@ -25,8 +25,10 @@ class TimeEntriesController < ApplicationController
 		@my_project = Project.find(params[:project_id])
 		@new_entry = @my_project.time_entries.new(entry_params)
 		if @new_entry.save
-		redirect_to project_time_entries_index_path
+		flash[:notice] = "Project created successfully"
+		redirect_to project_time_entries_path
 		else
+		flash[:alert] = "Something went wrong. Please try again."
 		redirect_to new_project_time_entry_path
 	end
 	end
@@ -47,8 +49,10 @@ class TimeEntriesController < ApplicationController
 			@my_project = Project.find_by(id: params[:project_id])
 			@new_entry = @my_project.time_entries.find_by(id: params[:id])
 			if @new_entry.update(entry_params)
-			redirect_to project_time_entries_index_path
+			flash[:notice] = "Project updated successfully"
+			redirect_to project_time_entries_path
 			else
+			flash[:alert] = "Something went wrong. Please try again."	
 			render "edit"
 			end
 	end
@@ -62,7 +66,7 @@ class TimeEntriesController < ApplicationController
 		
 		@new_entry.destroy 
 
-		redirect_to(project_time_entries_index_path(@my_project))
+		redirect_to(project_time_entries_path(@my_project))
 	end
 
 #============================================================================================
