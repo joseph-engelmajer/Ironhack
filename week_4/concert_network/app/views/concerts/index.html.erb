@@ -1,0 +1,27 @@
+<h1> Welcome to the Concert Network </h1>
+
+<ul>
+	<% @todays_concerts_array.each do |the_concert| %>
+	<li>
+	<a href="/concerts/<%= the_concert.id %>">
+		<%= the_concert.artist %>
+		<%= the_concert.venue %>
+	</a>	
+	</li>
+	<% end %>
+</ul>
+
+<h2> This Month's Concerts </h2>
+
+<ul>
+	<% @months_concerts_ordered_array.each do |the_concert| %>
+	<li>
+	<a href="/concerts/<%= the_concert.id %>">
+		<%= the_concert.artist %>
+		<%= the_concert.venue %>
+	</a>	
+	</li>
+	<% end %>
+</ul>
+
+<a href="/concerts/new" > Add a New Concert to the List </a>
