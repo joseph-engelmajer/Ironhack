@@ -10,4 +10,27 @@
 
 <p> $<%= @my_concert.price %> </p>
 
-<a href="/"> Home </a>
+<a href="/"> Home </a><br>
+
+<h3> Join the Discussion! Leave a Comment. </h3>
+
+<%= form_for [@my_concert, @my_comment] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :content %>
+	<%= f.text_field :content %>
+
+	<%= f.button %>
+<% end %>
+
+<br>
+
+<ul>
+	<% @my_concert.comments.each do |the_comment| %>
+	<li>
+		<%= the_comment.name %>
+		<%= the_comment.content %>
+	</li>
+	<% end %>
+</ul>

@@ -23,6 +23,7 @@ class ConcertsController < ApplicationController
 
 	def show
 		@my_concert = Concert.find(params[:id])
+		@my_comment = @my_concert.comments.new
 		render "show"
 	end
 

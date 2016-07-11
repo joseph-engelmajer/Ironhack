@@ -1,5 +1,7 @@
 class Concert < ApplicationRecord
 
+	has_many :comments
+
 	validates :artist, presence: true
 	validates :venue, presence: true 
 	validates :city, presence: true
