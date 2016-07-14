@@ -6,7 +6,7 @@ PokemonApp.Pokemon = class {
 	}
 
 	render() {
-		console.log("Rendering pokemon: #"+this.id);
+		// console.log("Rendering pokemon: #"+this.id);
 
 		$.ajax({
 			type: 'GET',
@@ -36,7 +36,9 @@ PokemonApp.Pokemon = class {
 					var sprites = new PokemonApp.Sprites(response.sprites[0].resource_uri)
 					sprites.render()
 
-				console.log(response);
+					var description = new PokemonApp.Description(response.descriptions)
+					description.render()
+
 			},
 			error: function(response) {
 				console.log("erroooorrrrrrr")

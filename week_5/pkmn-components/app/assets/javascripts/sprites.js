@@ -14,8 +14,6 @@ PokemonApp.Sprites = class {
 			url: this.uri,
 			success: function(response) {
 				$(".js-sprite-img").html(`<img src="http://pokeapi.co/${response.image}"" height="150" class="js-sprite-img">`)
-				console.log("--------------this is the sprite api-------");
-				console.log(response);
 			},
 			error: function(response) {
 				console.log("erroooorrrrrrr");
