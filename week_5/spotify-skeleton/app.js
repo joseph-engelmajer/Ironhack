@@ -31,17 +31,27 @@ $(document).ready(function(){
 //=================================================================================================== 
 
 	function displaySong(response){
+		$('div.btn-play').removeClass("disabled")
 		var newAuthor = response.tracks.items[0].artists[0].name
 		var newTitle = response.tracks.items[0].name
 		var newAlbum = response.tracks.items[0].album.images[0].url
+		var newSong = response.tracks.items[0].preview_url
 
 		$('p.title').text(newTitle)
 		$('p.author').text(newAuthor)
 		$('div.cover>img').attr("src",newAlbum)
+		$('audio').attr("src",newSong)
 
+		console.log("------response------")
+		console.log(response)
+		console.log("--------Album--------")
 		console.log(newAlbum)
+		console.log("-------Title---------")
 		console.log(newTitle)
+		console.log("------newAuthor-------")
 		console.log(newAuthor)
+		console.log("-------SongUrl--------")
+		console.log(newSong)
 	};
 
 //===================================================================================================
@@ -53,5 +63,24 @@ $(document).ready(function(){
 	  console.log(error.responseText);
 	}
 //===================================================================================================
+//=============== Play Button Functionality =========================================================
+//===================================================================================================
+
+	$('.btn-play').on('click', function(){
+  		$('div.btn-play').toggleClass("playing")
+  			if ($('div.btn-play').hasClass("playing")){	
+  				$('audio').trigger('play');}
+  			else {
+  				$('audio').trigger('pause');
+  			}
+	});
+
+
+	// $('.btn-play.playing').on('click', function(){
+ //  		$('audio').trigger('pause');
+	// });
+
+//===================================================================================================
+
 
 });
