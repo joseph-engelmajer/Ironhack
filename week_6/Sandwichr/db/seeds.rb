@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+meatball_sub = Sandwich.create(name: "meatball sub", bread_type: "Hogie")
+
+meatballs = Ingredient.create(name: "meatballs", calories: 150)
+marinara = Ingredient.create(name: "marinara", calories: 50)
+
+meatball_sub.ingredients.push(meatballs)
+meatball_sub.ingredients.push(marinara)
