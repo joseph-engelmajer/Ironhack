@@ -15,7 +15,8 @@ class SandwichesController < ApplicationController
 			render json: {error: "sandwich not found"}, status: 404
 			return
 		end
-		render json: sandwich 
+		render json: sandwich.to_json(include: :ingredients)
+		# render json: sandwich sandwich.ingredients 
 	end
 
 	def update

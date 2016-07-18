@@ -10,6 +10,8 @@ meatball_sub = Sandwich.create(name: "meatball sub", bread_type: "Hogie")
 
 meatballs = Ingredient.create(name: "meatballs", calories: 150)
 marinara = Ingredient.create(name: "marinara", calories: 50)
+parmesan = Ingredient.create(name: "parmesan", calories: 50)
 
 meatball_sub.ingredients.push(meatballs)
 meatball_sub.ingredients.push(marinara)
+meatball_sub.ingredients.push(parmesan)
