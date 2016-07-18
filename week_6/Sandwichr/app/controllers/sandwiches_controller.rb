@@ -4,10 +4,16 @@ class SandwichesController < ApplicationController
 		render json: sandwiches
 	end
 
+# ==================================================================================================
+# ==================================================================================================	
+
 	def create
 		sandwich = Sandwich.create(sandwich_params)
 		render json: sandwich 
 	end
+
+# ==================================================================================================
+# ==================================================================================================	
 
 	def show
 		sandwich = Sandwich.find_by(id: params[:id])
@@ -15,9 +21,23 @@ class SandwichesController < ApplicationController
 			render json: {error: "sandwich not found"}, status: 404
 			return
 		end
-		render json: sandwich.to_json(include: :ingredients)
-		# render json: sandwich sandwich.ingredients 
+		render json: sandwich.to_json(include: :ingredients) 
 	end
+
+# ==================================================================================================
+# ==================================================================================================	
+
+	def add_ingredient
+		sandwich = Sandwich.find_by(id: params[:id])
+		unless sandwich 
+			render json: {error: "sandwich not found"}, status: 404
+			return
+		end
+		sandwich.ingredients.push(Ingredient.find_by(id: params[:ingredient_id]))
+	end
+
+# ==================================================================================================
+# ==================================================================================================	
 
 	def update
 		sandwich = Sandwich.find_by(id: params[:id])
@@ -30,6 +50,9 @@ class SandwichesController < ApplicationController
 		head :no_content 	
 	end
 
+# ==================================================================================================
+# ==================================================================================================	
+
 	def destroy
 		sandwich = Sandwich.find_by(id: params[:id])
 		unless sandwich
@@ -40,6 +63,10 @@ class SandwichesController < ApplicationController
 		sandwich.destroy 
 		render json: sandwich
 	end
+
+# ==================================================================================================
+# ======== ****** PRIVATE **** =====================================================================
+# ==================================================================================================
 
 	private
 
