@@ -1,0 +1,11 @@
+<ul>
+<% @sandwiches.each do |the_sandwich| %>
+	
+		<li>
+		<a href="/sandwiches/<%= the_sandwich.id %>">
+		<%= the_sandwich.name %>
+		</a>
+		</li>
+	
+<% end %>
+</ul>
