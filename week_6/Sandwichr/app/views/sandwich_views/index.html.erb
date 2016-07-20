@@ -1,3 +1,4 @@
+<h1> Our Sandwiches </h1>
 <ul>
 <% @sandwiches.each do |the_sandwich| %>
 	
@@ -9,3 +10,6 @@
 	
 <% end %>
 </ul>
+
+<%= link_to "Home", '/' %> <br>
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>
